@@ -1,0 +1,179 @@
+/* ===== Reset leve e base ===== */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #1f2933;
+  background: #fafafa;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ===== Cabeçalho ===== */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #eceff1;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Branding */
+.brand {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.perfil-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 1px 0 rgba(16,24,32,0.04);
+  background: transparent; /* svg já tem círculo branco */
+}
+.nome-apresentacao h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #0f1720;
+}
+.apresentacao {
+  margin: 0.15rem 0 0;
+  font-size: 0.92rem;
+  color: #475569;
+}
+
+/* Navegação */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.75rem;
+}
+.main-nav a {
+  text-decoration: none;
+  color: #0f1720;
+  padding: 0.45rem 0.7rem;
+  border-radius: 8px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.94rem;
+}
+.main-nav a:hover,
+.main-nav a:focus {
+  background: #f1f5f9;
+  outline: none;
+}
+
+/* ===== Seções ===== */
+.secao {
+  padding: 2rem 0;
+  background: transparent;
+}
+
+/* Habilidades */
+.habilidades {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+  border-top: 1px solid #eef2f6;
+  border-bottom: 1px solid #eef2f6;
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+/* Títulos */
+h2 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.35rem;
+  color: #0b2330;
+}
+h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.03rem;
+}
+
+/* Texto e listas */
+p {
+  margin: 0 0 1rem 0;
+  color: #293241;
+}
+.lista-habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  padding-left: 1rem;
+  margin: 0;
+}
+.lista-habilidades li {
+  list-style: disc;
+  min-width: 140px;
+}
+
+/* ===== Projetos (cards) ===== */
+.cards-projetos {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.card-projeto {
+  background: #ffffff;
+  border: 1px solid #eef3f7;
+  padding: 1.1rem;
+  border-radius: 10px;
+  flex: 1 1 320px;
+  box-shadow: 0 4px 14px rgba(15,20,30,0.03);
+}
+
+/* ===== Botão estilizado ===== */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  background: #0b75c9; /* azul do ícone */
+  color: #fff;
+  font-weight: 700;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  font-size: 0.95rem;
+}
+.btn:hover,
+.btn:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(11,117,201,0.14);
+  outline: none;
+}
+
+/* Link em texto */
+a { color: #0b75c9; }
+a:hover { text-decoration: underline; }
+
+/* Contato - quebra de linha se necessário */
+.contato a { word-break: break-all; }
+
+/* Footer */
+.site-footer {
+  background: #0b1114;
+  color: #fff;
+  padding: 1rem 0;
+  margin-top: 2.5rem;
+}
+.footer-inner { text-align: center; font-size: 0.95rem; }
+
+/* Responsivo simples */
+@media (max-width: 760px) {
+  .header-inner { flex-direction: column; gap: 0.6rem; align-items: flex-start; }
+  .main-nav ul { gap: 0.5rem; flex-wrap: wrap; }
+  .perfil-icon { width: 60px; height: 60px; }
+  .cards-projetos { flex-direction: column; }
+}
